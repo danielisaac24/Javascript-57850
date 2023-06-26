@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(50, 50, 49);
+    color: #ffff;
+    text-align: center;
+}
+h2{
+    text-decoration: underline #e91e63 4px;
+}
+h3{
+    border: solid 2px #e91e63;
+}
+input {
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#ingresar{
+    margin-top: 10px;
+    font-size: 30px;
+    color: #e91e63;
+}
