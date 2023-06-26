@@ -8,10 +8,10 @@ function ingresar() {
         respuesta = window.prompt("Selecciones su respuesta por SI O NO");
     }
     if (respuesta == "si" || respuesta == "SI" || respuesta == "Si") {
-        let actividad = window.prompt("Seleciones el valor de la actividad a la que desea inscribirsee: Musculacion=1 Funcional=2 Crossfit=3 Boxeo=4");
-        while (actividad != "1" && actividad != "2" && actividad != "3" && actividad != "4") {
+        let actividad = window.prompt("Seleciones el valor de la actividad a la que desea inscribirsee: Musculacion=1 Funcional=2 Crossfit=3 Boxeo=4 Zumba=5");
+        while (actividad != "1" && actividad != "2" && actividad != "3" && actividad != "4" && actividad != "5") {
             window.alert("Ingrese un valor correcto")
-            actividad = window.prompt("Seleciones el valor de la actividad a la que desea inscribirsee: Musculacion=1 Funcional=2 Crossfit=3 Boxeo=4");
+            actividad = window.prompt("Seleciones el valor de la actividad a la que desea inscribirsee: Musculacion=1 Funcional=2 Crossfit=3 Boxeo=4 Zumba=5");
         }
 
         switch (actividad) {
@@ -26,6 +26,9 @@ function ingresar() {
                 break
             case '4':
                 document.getElementById('ingresar').innerHTML = 'Te inscribiste a BOXEO con el profesore Juan los dias Martes, Jueves y Sabados';
+                break
+            case '5':
+                document.getElementById('ingresar').innerHTML = 'Te inscribiste a ZUMBA con el profesore Martin los dias Martes, Jueves y Sabados';
                 break
         }
     } else {
