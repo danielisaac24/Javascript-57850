@@ -1,38 +1,34 @@
 
-function ingresar() {
-    let respuesta = window.prompt("BIENVENIDOS A FIT LIFE GIMNASIO\nDesea inscribirse a una activiad. seleccion su respuedsta por SI O NO");
-
-    // while (respuesta != "si" || respuesta != "SI" || respuesta != "Si" && respuesta != "no" || respuesta != "No" || respuesta != "No") {
-    while (respuesta != "si" && respuesta != "SI" && respuesta != "Si" && respuesta != "no" && respuesta != "NO" && respuesta != "No") {
-        window.alert("Respuesta mal ingresada. Ingrese nuevamente");
-        respuesta = window.prompt("Selecciones su respuesta por SI O NO");
+// function ingresar() {
+let alumnos = [];
+class nuevoAlumno {
+    constructor(nombre, apaellido, documento, nacimiento, numeroSocio) {
+        this.nombre = nombre;
+        this.apellido = apaellido;
+        this.documento = documento;
+        this.fechaNacimiento = nacimiento;
+        this.numeroSocio = numeroSocio;
     }
-    if (respuesta == "si" || respuesta == "SI" || respuesta == "Si") {
-        let actividad = window.prompt("Seleciones el valor de la actividad a la que desea inscribirsee: Musculacion=1 Funcional=2 Crossfit=3 Boxeo=4 Zumba=5");
-        while (actividad != "1" && actividad != "2" && actividad != "3" && actividad != "4" && actividad != "5") {
-            window.alert("Ingrese un valor correcto")
-            actividad = window.prompt("Seleciones el valor de la actividad a la que desea inscribirsee: Musculacion=1 Funcional=2 Crossfit=3 Boxeo=4 Zumba=5");
-        }
+    //     toString(elemento){
+    //     return '${this.elemento}
+    //     // Apellido: ${this.apellido}\n 
+    //     // DNI: ${this.documento}\n 
+    //     // Nacimiento: ${this.fechaNacimiento}\n
+    //     // Keypass ${this.numeroSocio}\n`;
+    // }
+}
+function agregarAlumnos() {
+    let nombre = prompt("Ingrese su nombre");
+    let apellido = prompt("Ingrese su apellido");
+    let documento = prompt("Ingrese su dni");
+    let fechaNacimiento = prompt("Ingrese su fecha de nacimiento");
+    let numeroSocio = prompt("Ingese 3 numeros para su keypass");
 
-        switch (actividad) {
-            case '1':
-                document.getElementById('ingresar').innerHTML = 'Te inscribiste a MUSCULACION con el profesore Felipe los dias miercoles y virenes';
-                break;
-            case '2':
-                document.getElementById('ingresar').innerHTML = 'Te inscribiste a FUNCIONAL con el profesore Carlos los dias Martes y Jueves';
-                break
-            case '3':
-                document.getElementById('ingresar').innerHTML = 'Te inscribiste a CROSSFIT con la profesora Alina los dias Lunes, Miercoles y Viernes';
-                break
-            case '4':
-                document.getElementById('ingresar').innerHTML = 'Te inscribiste a BOXEO con el profesore Juan los dias Martes, Jueves y Sabados';
-                break
-            case '5':
-                document.getElementById('ingresar').innerHTML = 'Te inscribiste a ZUMBA con el profesore Martin los dias Martes, Jueves y Sabados';
-                break
-        }
-    } else {
-        window.alert("Gracias por visitarnos")
+    let alumno = new nuevoAlumno(nombre, apellido, documento, fechaNacimiento, numeroSocio);
+    alumnos.push(alumno);
+    let filaActual = document.getElementById('filas').insertRow();
+    for (const valor in alumno) {
+        let celda1 = filaActual.insertCell()
+        celda1.innerHTML = alumno[valor];
     }
-
 }
