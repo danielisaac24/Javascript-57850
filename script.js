@@ -4,11 +4,11 @@ let alumnos = [];
 //let alumno = {}; // Declarar alumno como variable global
 
 class nuevoAlumno {
-    constructor(nombre, apellido, documento, nacimiento, numeroSocio) {
+    constructor(nombre, apellido, documento, inscripcion, numeroSocio) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.documento = documento;
-        this.fechaNacimiento = nacimiento;
+        this.fechaInscripcion = inscripcion;
         this.numeroSocio = numeroSocio;
     }
 }
@@ -17,10 +17,11 @@ function agregarAlumnos() {
     let nombre = prompt("Ingrese su nombre");
     let apellido = prompt("Ingrese su apellido");
     let documento = prompt("Ingrese su DNI");
-    let fechaNacimiento = prompt("Ingrese su fecha de nacimiento");
+    let fechaInscripcion = new Date().toLocaleString('en-GB', { timeZone: 'UTC' });
+
     let numeroSocio = prompt("Ingrese 3 números para su keypass");
 
-    let alumno = new nuevoAlumno(nombre, apellido, documento, fechaNacimiento, numeroSocio);
+    let alumno = new nuevoAlumno(nombre, apellido, documento, fechaInscripcion, numeroSocio);
     return alumno;
 }
 
