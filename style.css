@@ -13,47 +13,56 @@ h3 {
 }
 
 input {
-    background-color: #e91e63;
-    color: #fff;
+    background-color: #e0ddde;
+    color: #111111;
     border: none;
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
 }
 
-#ingresar {
-    margin-top: 10px;
-    font-size: 30px;
-    color: #e91e63;
+.botones{
+    margin-top: 100px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: .625rem   ;
+}
+button:hover{
+    background-color: #e91e63;
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
 }
 
-.styled-table {
-    width: 100%;
+.info-alumnos {
+    width: 80%;
     border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 1em;
+    font-size: .625rem;
     font-family: sans-serif;
     min-width: 450px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.styled-table thead tr {
+.info-alumnos thead tr {
     background-color: #980081;
     color: #ffffff;
     text-align: middle;
 }
 
-.styled-table th,
-.styled-table td {
+.info-alumnos th,
+.info-alumnos td {
     padding: 12px 15px;
 }
 
-.styled-table tbody tr {
+.info-alumnos tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
 
 
-.styled-table tbody tr:last-of-type {
+.info-alumnos tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
