@@ -3,8 +3,12 @@ body {
     color: #ffff;
     text-align: center;
 }
-
+h1{
+    color:#ffffff;
+    text-decoration: underline #e91e63 4px;
+}
 h2 {
+    color:#ffffff;
     text-decoration: underline #e91e63 4px;
 }
 

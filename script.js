@@ -33,31 +33,41 @@ function agregarAlumnos() {
 }
 
 function ingresarNuevoAlumno() {
-    let tabla = document.getElementById("filas");
-    tabla.innerHTML = "";
+
     let alumno = agregarAlumnos();
     alumnos.push(alumno);
     let index = localStorage.length;
     localStorage.setItem("alumno" + index, JSON.stringify(alumno));
+    
     // Generar la tabla con alumnos inscriptos
-    let filaActual = tabla.insertRow();
-    for (const valor in alumno) {
-        let celda1 = filaActual.insertCell();
-        celda1.innerHTML = alumno[valor];
+    let tabla = document.getElementById("filas");
+    tabla.innerHTML = "";
+
+    for (let i = 0; i < localStorage.length; i++) {
+        const alumno = JSON.parse(localStorage.getItem("alumno" + i));
+
+        let filaActual = tabla.insertRow();
+        for (const valor in alumno) {
+            let celda1 = filaActual.insertCell();
+            celda1.innerHTML = alumno[ valor ];
+        }
     }
+
 }
 
 function filtrarAlumnos() {
-    let alumnosf =[];
+    let alumnosf = [];
     let filtro = document.getElementById("filtro-nombre").value;
+
     for (let i = 0; i < localStorage.length; i++) {
         const alumno = JSON.parse(localStorage.getItem("alumno" + i));
         alumnosf.push(alumno);
     }
-    console.log(alumnos)
+
     let alumnosFiltrados = alumnosf.filter((alumno) => {
         return alumno.nombre.toLowerCase().includes(filtro.toLowerCase());
     });
+    
     // Vaciar la tabla
     let tabla = document.getElementById("filas");
     tabla.innerHTML = "";
@@ -67,34 +77,42 @@ function filtrarAlumnos() {
         let filaActual = tabla.insertRow();
         for (const valor in item) {
             let celda = filaActual.insertCell();
-            celda.innerHTML = item[valor];
+            celda.innerHTML = item[ valor ];
         }
     }
 }
 
 function ingresar() {
-    console.log("estoy dentro de ingresar");
+
     let keypass = document.getElementById("keypass").value;
+
     for (let i = 0; i < localStorage.length; i++) {
         const alumno = JSON.parse(localStorage.getItem("alumno" + i));
         if (keypass == alumno.numeroSocio) {
-            console.log("dentro del if");
-            alert("su nombre es\t" + alumno.nombre);
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'SU NOMBRE Es\t' + alumno.nombre,
+                showConfirmButton: false,
+                timer: 3000
+            })
         }
     }
+
 }
 
 function actualizarLista() {
+
     let tabla = document.getElementById("filas");
     tabla.innerHTML = "";
 
     for (let i = 0; i < localStorage.length; i++) {
         const alumno = JSON.parse(localStorage.getItem("alumno" + i));
-        // Generar la tabla con alumnos inscriptos
         let filaActual = tabla.insertRow();
         for (const valor in alumno) {
             let celda1 = filaActual.insertCell();
-            celda1.innerHTML = alumno[valor];
+            celda1.innerHTML = alumno[ valor ];
         }
     }
+
 }
