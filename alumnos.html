@@ -12,23 +12,20 @@
 <body>
   <a href="index.html"><h1>FITLIFE GIMNASIO</h1></a>
   <h2>Alumnos</h2>
-  <h3>Musculacion--------Funcional--------Crossfit--------Boxeo--------Zumba</h3>
   <section class="contenedor">
-    <div class="botones">
+    <div class="botones-alumnos">
       <button onclick="actualizarLista()">Actualizar</button>
       <button onclick="ingresarNuevoAlumno()">Ingrese Nuevo alumno</button>
       <input type="text" id="filtro-nombre" placeholder="Ingrese el nombre a filtrar">
       <button onclick="filtrarAlumnos()">Filtrar</button>
-
     </div>
-    <table class="info-alumnos">
+    <table class="info-tabla">
       <thead>
         <tr>
-          <th>Nombre</th>
-          <th>Apellido</th>
+          <th>nombre</th>
           <th>DNI</th>
-          <th>Fecha de Inscripcion</th>
           <th>N° Socio</th>
+          <th>Fecha de Inscripcion</th>
         </tr>
       </thead>
       <tbody id="filas">

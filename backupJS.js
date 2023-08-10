@@ -83,25 +83,9 @@ function filtrarAlumnos() {
 }
 
 function ingresar() {
-console.log('12')
+
     let keypass = document.getElementById("keypass").value;
-    fetch('./alumnos.json')
-        .then( (res) => res.json())
-        .then( (data) => {
-            data.forEach((cliente) => {
-                console.log('13')
-                if (keypass == cliente.id) {
-                    Swal.fire({
-                        position: 'center',
-                        icon: 'success',
-                        title: 'SU NOMBRE Es\t' + cliente.cliente,
-                        showConfirmButton: false,
-                        timer: 3000
-                    })
-                }
-            })
-        })
-        /*
+
     for (let i = 0; i < localStorage.length; i++) {
         const alumno = JSON.parse(localStorage.getItem("alumno" + i));
         if (keypass == alumno.numeroSocio) {
@@ -113,7 +97,7 @@ console.log('12')
                 timer: 3000
             })
         }
-    }*/
+    }
 
 }
 let input1  = document.getElementById("keypass")
@@ -124,19 +108,7 @@ input1.addEventListener("keydown", function(event) {
 })
 
 function actualizarLista() {
-    let tabla = document.getElementById("filas");
-    fetch('./alumnos.json')
-        .then( (res) => res.json())
-        .then( (data) => {
-            data.forEach((cliente) => {
-                let filaActual = tabla.insertRow();
-                for (const valor in cliente) {
-                    let celda1 = filaActual.insertCell();
-                    celda1.innerHTML = cliente[ valor ];
-                }
-            })
-        })
-/*
+
     let tabla = document.getElementById("filas");
     tabla.innerHTML = "";
 
@@ -148,7 +120,7 @@ function actualizarLista() {
             celda1.innerHTML = alumno[ valor ];
         }
     }
-*/
+
 }
 
 document.getElementById("fetch").addEventListener("click", fetchP)

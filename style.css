@@ -1,14 +1,15 @@
 body {
     background-color: rgb(50, 50, 49);
-    color: #ffff;
     text-align: center;
 }
-h1{
-    color:#ffffff;
+
+h1 {
+    color: #ffffff;
     text-decoration: underline #e91e63 4px;
 }
+
 h2 {
-    color:#ffffff;
+    color: #ffffff;
     text-decoration: underline #e91e63 4px;
 }
 
@@ -20,53 +21,81 @@ input {
     background-color: #e0ddde;
     color: #111111;
     border: none;
+    margin-top: 20px;
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
 }
 
-.botones{
-    margin-top: 100px;
+.botones-alumnos,
+.botones-index {
+    margin-top: 10px;
     width: 200px;
     display: flex;
     flex-direction: column;
-    gap: .625rem   ;
+    gap: 0.625rem;
 }
-button:hover{
+
+.botones-index {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button {
+    width: 200px;
+    height: 30px;
+}
+
+button:hover {
     background-color: #e91e63;
 }
-.contenedor{
+
+.contenedor {
     display: flex;
     flex-direction: row;
     gap: 1.25rem;
 }
 
-.info-alumnos {
+.info-tabla {
     width: 80%;
+    color: #ffffff;
     border-collapse: collapse;
-    font-size: .625rem;
+    font-size: 0.625rem;
     font-family: sans-serif;
     min-width: 450px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.info-alumnos thead tr {
+.info-tabla thead tr {
     background-color: #980081;
     color: #ffffff;
     text-align: middle;
 }
 
-.info-alumnos th,
-.info-alumnos td {
+.info-tabla th,
+.info-tabla td {
     padding: 12px 15px;
 }
 
-.info-alumnos tbody tr {
+.info-tabla tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
-
-
-.info-alumnos tbody tr:last-of-type {
+.info-tabla tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
+}
+
+.contenedor-flex {
+    margin-top: 1.875rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.contenedor-flex div {
+    width: 250px;
+    height: 100px;
+    background-color: #dddddd;
 }
