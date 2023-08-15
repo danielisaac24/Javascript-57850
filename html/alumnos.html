@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+
+</head>
+
+<body>
+  <header>
+    <nav>
+        <div class="logo"><img src="../assets/logo.png" alt=""></div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="alumnos.html">Alumnos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <section class="contenedor-alumnos">
+    <div class="botones-alumnos">
+      <button onclick="actualizarLista()">Actualizar</button>
+      <input type="text" id="filtro-nombre" placeholder="Ingrese el nombre a filtrar">
+      <button onclick="filtrarAlumnos()">Filtrar</button>
+    </div>
+    <table class="info-tabla">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>DNI</th>
+          <th>N° Socio</th>
+          <th>Fecha de Inscripcion</th>
+        </tr>
+      </thead>
+      <tbody id="filas">
+      </tbody>
+    </table>
+  </section>
+  <footer>
+    <div class="container">
+        <p>&copy; 2023 FIT LIFE GIMNASIO. Todos los derechos reservados.</p>
+    </div>
+</footer>
+  <script src="../script/alumnos.js"></script>
+</body>
+
+</html>

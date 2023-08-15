@@ -1,12 +1,12 @@
 [
-    {"cliente": "Alfonso Guzman", "dni": 57361592, "id": 351, "fecha_alta": "2023-01-29!"},
-    {"cliente": "Gerardo Mercado", "dni": 97304005, "id": 260, "fecha_alta": "2023-01-29!"},
-    {"cliente": "Carlos Aguirre", "dni": 56935643, "id": 923, "fecha_alta": "2023-01-29!"},
-    {"cliente": "Alberto Gaitan", "dni": 42136714, "id": 913, "fecha_alta": "2023-01-29!"},
-    {"cliente": "Alina Cofone", "dni": 33948842, "id": 853, "fecha_alta": "2023-01-29!"},
-    { "cliente": "Mayra Morales", "dni": 20325652, "id": 638, "fecha_alta": "2023-01-29!"},
-    {"cliente": "Carla Guzman", "dni": 30405403, "id": 151, "fecha_alta": "2023-01-29!"},
-    {"cliente": "Rocio Aballay", "dni": 32022991, "id": 436, "fecha_alta": "2023-01-29!"},
-    {"cliente": "Alberto Gaitan", "dni": 23778303, "id": 137, "fecha_alta": "2023-01-29!"},
-    {"cliente": "Antonio Martin", "dni": 35089658, "id": 832, "fecha_alta": "2023-01-29!"}
+    {"cliente": "Alfonso Guzman", "dni": 57361592, "id": 351, "fecha_alta": "2023-01-29"},
+    {"cliente": "Gerardo Mercado", "dni": 97304005, "id": 260, "fecha_alta": "2023-01-29"},
+    {"cliente": "Carlos Aguirre", "dni": 56935643, "id": 923, "fecha_alta": "2023-01-29"},
+    {"cliente": "Alberto Gaitan", "dni": 42136714, "id": 913, "fecha_alta": "2023-01-29"},
+    {"cliente": "Alina Cofone", "dni": 33948842, "id": 853, "fecha_alta": "2023-01-29"},
+    { "cliente": "Mayra Morales", "dni": 20325652, "id": 638, "fecha_alta": "2023-01-29"},
+    {"cliente": "Carla Guzman", "dni": 30405403, "id": 151, "fecha_alta": "2023-01-29"},
+    {"cliente": "Rocio Aballay", "dni": 32022991, "id": 436, "fecha_alta": "2023-01-29"},
+    {"cliente": "Alberto Gaitan", "dni": 23778303, "id": 137, "fecha_alta": "2023-01-29"},
+    {"cliente": "Antonio Martin", "dni": 35089658, "id": 832, "fecha_alta": "2023-01-29"}
 ]
