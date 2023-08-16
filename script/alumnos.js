@@ -37,26 +37,26 @@ function actualizarLista() {
         })
 }
 
-document.getElementById("fetch").addEventListener("click", fetchP)
-function fetchP() {
-                const lista = document.querySelector('#respuesta')
-                fetch('../alumnos.json')
-                    .then((res) => res.json())
-                    .then((data) => {
-                        data.forEach((cliente) => {
-                            const li = document.createElement('li')
-                            li.innerHTML = `<h4>${cliente.cliente}</h4>
-                                    <p>${cliente.dni}</p>
-                                    <p>${cliente.id}</p>
-                                    <p>Código: ${cliente.fecha_alta}</p>
-                                    <div>
-                                    <p>Días restantes....XXX restar hoy - ultimo pago</p>
-                                    <button>Pagar</buttton>
-                                    </div>`
-                            lista.append(li)
-                        })
-                    })
-            }
+// document.getElementById("fetch").addEventListener("click", fetchP)
+// function fetchP() {
+//                 const lista = document.querySelector('#respuesta')
+//                 fetch('../alumnos.json')
+//                     .then((res) => res.json())
+//                     .then((data) => {
+//                         data.forEach((cliente) => {
+//                             const li = document.createElement('li')
+//                             li.innerHTML = `<h4>${cliente.cliente}</h4>
+//                                     <p>${cliente.dni}</p>
+//                                     <p>${cliente.id}</p>
+//                                     <p>Código: ${cliente.fecha_alta}</p>
+//                                     <div>
+//                                     <p>Días restantes....XXX restar hoy - ultimo pago</p>
+//                                     <button>Pagar</buttton>
+//                                     </div>`
+//                             lista.append(li)
+//                         })
+//                     })
+//             }
 
 
 

@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
 <header>
     <nav>
-        <div class="logo"><img src="../assets/logo.png" alt=""></div>
+        <div class="logo"><img src="./assets/logo.png" alt=""></div>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="actividades.html">Actividades</a></li>
-            <li><a href="alumnos.html">Alumnos</a></li>
+            <li><a href="./pages/actividades.html">Actividades</a></li>
+            <li><a href="./pages/alumnos.html">Alumnos</a></li>
             <li><a href="#">Nosotros</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
@@ -26,8 +26,11 @@
     <h2>Ingrese ID Alumno</h2>
     <input type="text" id="keypass" placeholder="Ingrese N° de socio">
     <h2>Actividades de la Semana</h2>
-    <div id="respuesta"> <!-- Contenedor para la lista de actividades -->
+    <div id="respuesta">
         <ul></ul>
+    </div>
+    <h2>Dias de mensualidad</h2>
+    <div id="respuesta1">
     </div>
 </main>
 <footer>
@@ -35,7 +38,7 @@
         <p>&copy; 2023 FIT LIFE Gimnasio. Todos los derechos reservados.</p>
     </div>
 </footer>
-<script src="../script/script.js"></script>
+<script src="./script/script.js"></script>
 </body>
 
 </html>

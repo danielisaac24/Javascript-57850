@@ -25,15 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (keypass == cliente.id) {
                         let semana = new actividadesSemanales(cliente.cliente, lunes, martes, miercoles, jueves, viernes);
                         localStorage.setItem(cliente.cliente, JSON.stringify(semana));
-                    }else {
-                        Swal.fire({
-                            position: 'center',
-                            icon: 'error',
-                            title: 'No eres alumno de FIT LIFE',
-                            showConfirmButton: false,
-                            timer: 2000
-                        })
                     }
+                    // else {
+                    //     Swal.fire({
+                    //         position: 'center',
+                    //         icon: 'error',
+                    //         title: 'No eres alumno de FIT LIFE',
+                    //         showConfirmButton: false,
+                    //         timer: 2000
+                    //     })
+                    // }
                 });
             });
     });
