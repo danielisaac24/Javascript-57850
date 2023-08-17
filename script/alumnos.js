@@ -17,10 +17,8 @@ function filtrarAlumnos() {
                 }
             }
         })
-        .catch((error) => {
-            console.error('Error al cargar el archivo JSON:', error);
-        });
 }
+
 function actualizarLista() {
     let tabla = document.getElementById("filas");
     tabla.innerHTML = "";
@@ -30,33 +28,29 @@ function actualizarLista() {
             data.forEach((cliente) => {
                 let filaActual = tabla.insertRow();
                 for (const valor in cliente) {
-                    let celda1 = filaActual.insertCell();
-                    celda1.innerHTML = cliente[valor];
+                    let celda = filaActual.insertCell();
+                    celda.innerHTML = cliente[valor];
                 }
+                let celdaBoton = filaActual.insertCell();
+                let botonPagar = document.createElement('button');
+                botonPagar.textContent = 'Pagar';
+                botonPagar.addEventListener('click', function () {
+                    pagar(cliente.id); 
+                });
+                celdaBoton.appendChild(botonPagar);
             })
         })
 }
 
-// document.getElementById("fetch").addEventListener("click", fetchP)
-// function fetchP() {
-//                 const lista = document.querySelector('#respuesta')
-//                 fetch('../alumnos.json')
-//                     .then((res) => res.json())
-//                     .then((data) => {
-//                         data.forEach((cliente) => {
-//                             const li = document.createElement('li')
-//                             li.innerHTML = `<h4>${cliente.cliente}</h4>
-//                                     <p>${cliente.dni}</p>
-//                                     <p>${cliente.id}</p>
-//                                     <p>Código: ${cliente.fecha_alta}</p>
-//                                     <div>
-//                                     <p>Días restantes....XXX restar hoy - ultimo pago</p>
-//                                     <button>Pagar</buttton>
-//                                     </div>`
-//                             lista.append(li)
-//                         })
-//                     })
-//             }
-
-
-
+function pagar(clienteId) {
+    let fechaPago = new Date();
+    const fechaISO = fechaPago.toISOString();
+    localStorage.setItem('pago'+clienteId, fechaISO)
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Pago Realizado',
+        showConfirmButton: false,
+        timer: 2000
+    });
+}

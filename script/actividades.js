@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const miercoles = document.getElementById("actividad-miercoles").value;
         const jueves = document.getElementById("actividad-jueves").value;
         const viernes = document.getElementById("actividad-viernes").value;
-
+        let alumnoEncontrado = false;
         let keypass = document.getElementById("keypass").value;
         fetch('../alumnos.json')
             .then((res) => res.json())
@@ -25,17 +25,25 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (keypass == cliente.id) {
                         let semana = new actividadesSemanales(cliente.cliente, lunes, martes, miercoles, jueves, viernes);
                         localStorage.setItem(cliente.cliente, JSON.stringify(semana));
+                        alumnoEncontrado = true;
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Actividades Guardadas',
+                            showConfirmButton: false,
+                            timer: 2000
+                        });
                     }
-                    // else {
-                    //     Swal.fire({
-                    //         position: 'center',
-                    //         icon: 'error',
-                    //         title: 'No eres alumno de FIT LIFE',
-                    //         showConfirmButton: false,
-                    //         timer: 2000
-                    //     })
-                    // }
                 });
+                if (!alumnoEncontrado) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'error',
+                        title: 'No eres alumno de FIT LIFE',
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                }
             });
     });
 });
