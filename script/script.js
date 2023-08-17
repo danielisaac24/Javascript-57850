@@ -7,7 +7,7 @@ function ingresar() {
     let keypass = document.getElementById("keypass").value;
     let alumnoEncontrado = false;
 
-    fetch('../alumnos.json')
+    fetch('https://raw.githubusercontent.com/danielisaac24/Javascript-57850/main/alumnos.json')
         .then((res) => res.json())
         .then((data) => {
             data.forEach((cliente) => {
